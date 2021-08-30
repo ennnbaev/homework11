@@ -21,8 +21,8 @@ public class Homework {
             while (true) {
                 System.out.println("Введите значения массива");
                 try {
-                    String input3 = scanner.nextLine();
-                    mass[i]=Integer.parseInt(input3);
+                    String input = scanner.nextLine();
+                    mass[i]=Integer.parseInt(input);
                     break;
                 } catch (NumberFormatException exception){
                     System.out.println(exception.getMessage());
