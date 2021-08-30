@@ -6,8 +6,8 @@ public class Homework {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         int massSize;
-        System.out.println("Введите размер массива");
         while (true) {
+            System.out.println("Введите размер массива");
             try {
                 String input = scanner.nextLine();
                 massSize=Integer.parseInt(input);
@@ -18,8 +18,8 @@ public class Homework {
         }
         int[] mass=new int[massSize];
         for (int i=0;i<mass.length;i++){
-            System.out.println("Введите значения массива");
             while (true) {
+                System.out.println("Введите значения массива");
                 try {
                     String input3 = scanner.nextLine();
                     mass[i]=Integer.parseInt(input3);
@@ -29,18 +29,15 @@ public class Homework {
                 }
             }
         }
-        System.out.println("Введите два индекса массива");
         while (true) {
+            System.out.println("Введите два индекса массива");
             try {
                 String input = scanner.nextLine();
                 String input2 = scanner.nextLine();
-                int b=Integer.parseInt(input);
-               int g= Integer.parseInt(input2);
-                System.out.println(mass[b]/mass[g]);
+                System.out.println(mass[Integer.parseInt(input)]/mass[Integer.parseInt(input2)]);
                 break;
             } catch (ArrayIndexOutOfBoundsException | NumberFormatException | ArithmeticException ex) {
                 System.out.println(ex.getMessage());
             }
-
         }}
 }
